@@ -34,12 +34,20 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #87ceeb,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  skyblue:   #87ceeb,
+  deepskyblue: #00bfff,
+  dodgerblue:  dodgerblue,
+  darkblue:darkblue,
+  lightblue:#add8e6
 );
+// ion-item colors
+$list-md-background-color:color($colors,skyblue);
+$list-md-text-color:color($colors,light);
 
 
 // App iOS Variables

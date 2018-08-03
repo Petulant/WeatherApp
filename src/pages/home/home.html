@@ -1,14 +1,87 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
-  <ion-navbar>
+
+  <ion-navbar color="skyblue">
     <ion-title>
-      Ionic Blank
+      <div class="title">
+      WEATHER-TODAY
+    </div>
     </ion-title>
+
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-select [(ngModel)]="convertion"  placeholder="Temperature to Fahrenheit & Celsius"  (ionChange)="changeTemp()"style="max-width: 100%; width: 100%">
+  <ion-option value="value1" >Kelvin to Fahrenheit</ion-option>
+  <ion-option value="value2" >Kelvin to Celsius</ion-option>
+</ion-select><br><br>
+
+<ion-grid>
+    <ion-row>
+      <ion-col width-50 offset-25>
+        <div class="location">{{weatherInfo?.name}}, {{weatherInfo?.sys.country}}</div>
+         <h3 class="desc">{{weatherInfo?.weather[0].description}}</h3>
+         <h1 class="temp">{{weatherInfo?.main.temp}}&deg;</h1>
+        </ion-col>
+        </ion-row>
+    
+        <ion-row>
+        <ion-col width-200>
+          <ion-list>
+        
+            <ion-item >
+              <h2>Temp: {{weatherInfo?.main.temp}}&deg;</h2>
+            </ion-item>
+
+            <ion-item>
+                <h2>Pressure: {{weatherInfo?.main.pressure}}</h2>
+            </ion-item>
+
+            <ion-item>
+                <h2>Humidity: {{weatherInfo?.main.humidity}}%</h2>
+            </ion-item>
+
+            <ion-item>
+                <h2>Visibility: {{weatherInfo?.visibility}}</h2>
+            </ion-item>
+
+        </ion-list>
+        </ion-col>
+      </ion-row>    
+  
+      <ion-list>
+          <ion-item>
+              <p item-start>Kelvin to Fahrenheit:</p>
+              <p item-end>{{kelviF}}&deg;F</p>
+          </ion-item>
+           
+        
+          <ion-item>
+              <p item-start>Kelvin to Celsius:</p>
+              <p item-end>{{kelviC}}&deg;C</p>
+          </ion-item>
+        
+        </ion-list>
+
+    </ion-grid>
+
+
 </ion-content>
+<!-- 
+  <ion-select  placeholder="Choose the city" [(ngModel)] ="Place" (ionChange)="changeMethod()" >
+   
+    <ion-option value="pretoria">Pretoria</ion-option>
+    <ion-option value="johannesburg">Johannesburg</ion-option>
+    <ion-option value="durban">Durban</ion-option>
+    <ion-option value="cape Town">CapeTown</ion-option><br><br>
+    
+</ion-select> -->

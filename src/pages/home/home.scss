@@ -1,3 +1,43 @@
-page-home {
+ion-select{
 
+    box-sizing: border-box;
+    padding: 2px;
+    border: 2px solid skyblue;
+    border-radius: 6px;
+    margin-right:auto;
+    margin-left:auto;  
+ 
 }
+
+.location,.desc,.temp{
+      text-align: center;
+      color: aliceblue;
+}
+
+
+ion-content{
+    background-color:   lightblue !important;
+    // background-image: url('../../assets/imgs/snow.gif');
+    // background-repeat: no-repeat;
+    // background-position: right top;
+    box-sizing: border-box;
+    border: 15px solid skyblue;
+    
+
+   
+    
+}
+ion-title{
+    text-align: center;
+ 
+}
+.title{
+    color:white;
+}
+.temp{
+    font-size: 30px;
+}
+.location{
+    font-size: 30px;
+}
+
